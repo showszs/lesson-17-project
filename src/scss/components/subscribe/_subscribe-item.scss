@@ -1,0 +1,32 @@
+@use '../../presets' as *;
+@use '../../mixins' as *;
+
+.subscribe-item {
+  &__control {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding-left: $gap-lg;
+    padding-right: $gap-lg;
+    letter-spacing: 0.1em;
+    transition: border-color 0.3s, background-color 0.3s;
+    color: $color-white;
+    border: 2px solid transparent;
+    border-bottom-color: rgba($color-white, 0.2);
+  }
+  &__btn {
+    width: 100%;
+    min-width: auto;
+    color: $color-white;
+    border: 2px solid transparent;
+    border-bottom-color: rgba($color-white, 0.2);
+    transition: border-color 0.3s, background-color 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+      border-color: $color-white;
+    }
+  }
+}

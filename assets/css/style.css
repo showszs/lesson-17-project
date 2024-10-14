@@ -165,6 +165,7 @@ template {
 [hidden] {
   display: none;
 }
+.subscribe__container,
 .about__container,
 .header-menu__container,
 .header-content__container {
@@ -239,6 +240,20 @@ a {
 }
 .btn--primary {
   font-size: 1.125rem;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
 }
 
 .header {
@@ -380,6 +395,52 @@ a {
 }
 .about__description::after p {
   line-height: 1.333333em;
+}
+
+.subscribe {
+  padding: 30px;
+
+  background-color: #2d3651;
+}
+.subscribe__form {
+  display: grid;
+
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.subscribe-item__control {
+  display: block;
+
+  width: 100%;
+  height: 60px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  -webkit-transition: border-color 0.3s, background-color 0.3s;
+          transition: border-color 0.3s, background-color 0.3s;
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+  border: 2px solid transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+.subscribe-item__btn {
+  width: 100%;
+  min-width: auto;
+
+  cursor: pointer;
+  -webkit-transition: border-color 0.3s, background-color 0.3s;
+          transition: border-color 0.3s, background-color 0.3s;
+
+  color: #ffffff;
+  border: 2px solid transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+.subscribe-item__btn:hover,
+.subscribe-item__btn:focus {
+  border-color: #ffffff;
+  background-color: #d66926;
 }
 @media (min-width: 768px) {
   .about__description::after p {
