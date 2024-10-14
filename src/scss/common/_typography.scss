@@ -37,6 +37,24 @@ h1 {
 
 h2 {
   font-family: $font-header;
+  color: $color-primary;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+
+  @include lg-min {
+    font-size: 2.5rem;
+    margin: 0 0 3rem;
+  }
+
+  @include lg-md {
+    font-size: 2rem;
+    margin: 0 0 2.5rem;
+  }
+
+  @include md {
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
+  }
 }
 
 h3 {

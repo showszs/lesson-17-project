@@ -165,6 +165,7 @@ template {
 [hidden] {
   display: none;
 }
+.about__container,
 .header-menu__container,
 .header-content__container {
   width: min(100% - 40px, 1300px);
@@ -200,7 +201,12 @@ h1 {
 }
 
 h2 {
+  letter-spacing: 0.1em;
+
+  color: #2d3651;
+
   font-family: "Roboto Slab", serif;
+  line-height: 1.2em;
 }
 
 a {
@@ -347,9 +353,51 @@ a {
   background-color: rgba(45, 54, 81, 0.8);
 }
 
+.about {
+  background-color: #e5e5e5;
+}
+.about__container {
+  display: grid;
+}
+.about__image {
+  max-width: 100%;
+  max-height: 480px;
+}
+.about__description {
+  position: relative;
+}
+.about__description::after {
+  position: absolute;
+  top: 5px;
+
+  width: 2px;
+  height: 55%;
+  min-height: 200px;
+
+  content: "";
+
+  background-color: rgba(99, 117, 136, 0.1);
+}
+.about__description::after p {
+  line-height: 1.333333em;
+}
+@media (min-width: 768px) {
+  .about__description::after p {
+    font-size: 1.125rem;
+  }
+}
 @media (min-width: 992px) {
+  .about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   h1 {
     font-size: 3.75rem;
+  }
+  h2 {
+    margin: 0 0 3rem;
+
+    font-size: 2.5rem;
   }
   .btn--light {
     min-width: 250px;
@@ -360,11 +408,26 @@ a {
   .header-content__title {
     margin: 0 0 53px 0;
   }
+  .about__container {
+    gap: 100px;
+    grid-template-columns: 1fr 271px;
+  }
+  .about__description::after {
+    right: -50px;
+  }
 }
-
 @media (max-width: 991.8px) and (min-width: 768px) {
+  .about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
   h1 {
     font-size: 2.5rem;
+  }
+  h2 {
+    margin: 0 0 2.5rem;
+
+    font-size: 2rem;
   }
   .btn--light {
     min-width: 200px;
@@ -373,11 +436,26 @@ a {
   .header-content__title {
     margin: 0 0 43px 0;
   }
+  .about__container {
+    gap: 60px;
+    grid-template-columns: 1fr 255px;
+  }
+  .about__description::after {
+    right: -30px;
+  }
 }
-
 @media (max-width: 767.8px) {
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   h1 {
     font-size: 1.875rem;
+  }
+  h2 {
+    margin: 0 0 2rem;
+
+    font-size: 1.5rem;
   }
   .btn--light {
     min-width: 170px;
@@ -386,8 +464,12 @@ a {
   .header-content__title {
     margin: 0 0 33px 0;
   }
-}
+  .about__container {
+    text-align: center;
 
+    gap: 40px;
+  }
+}
 @media (max-width: 575.8px) {
   .header-content__actions {
     -webkit-box-align: center;
