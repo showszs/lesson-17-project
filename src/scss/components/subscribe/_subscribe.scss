@@ -11,7 +11,14 @@
 
   &__form {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: $gap;
+
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

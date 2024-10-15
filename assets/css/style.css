@@ -406,9 +406,7 @@ a {
   display: grid;
 
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
 }
-
 .subscribe-item__control {
   display: block;
 
@@ -424,18 +422,75 @@ a {
   color: #ffffff;
   border: 2px solid transparent;
   border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.subscribe-item__control::-webkit-input-placeholder {
+  color: #637588;
+}
+.subscribe-item__control::-moz-placeholder {
+  color: #637588;
+}
+.subscribe-item__control:-ms-input-placeholder {
+  color: #637588;
+}
+.subscribe-item__control::-ms-input-placeholder {
+  color: #637588;
+}
+.subscribe-item__control::placeholder {
+  color: #637588;
+}
+.subscribe-item__control:hover,
+.subscribe-item__control::focus {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.subscribe-item__control:hover::-webkit-input-placeholder,
+.subscribe-item__control::focus::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.subscribe-item__control:hover::-moz-placeholder,
+.subscribe-item__control::focus::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.subscribe-item__control:hover:-ms-input-placeholder,
+.subscribe-item__control::focus:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.subscribe-item__control:hover::-ms-input-placeholder,
+.subscribe-item__control::focus::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.subscribe-item__control:hover::placeholder,
+.subscribe-item__control::focus::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.subscribe-item__control:active {
+  outline: auto;
 }
 .subscribe-item__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
   width: 100%;
-  min-width: auto;
+  height: 60px;
+  padding: 0.5em 1em;
 
   cursor: pointer;
   -webkit-transition: border-color 0.3s, background-color 0.3s;
           transition: border-color 0.3s, background-color 0.3s;
+  letter-spacing: 0.1em;
 
   color: #ffffff;
   border: 2px solid transparent;
   border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .subscribe-item__btn:hover,
 .subscribe-item__btn:focus {
@@ -445,6 +500,9 @@ a {
 @media (min-width: 768px) {
   .about__description::after p {
     font-size: 1.125rem;
+  }
+  .subscribe__form {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 992px) {
@@ -475,6 +533,12 @@ a {
   }
   .about__description::after {
     right: -50px;
+  }
+  .subscribe-item__control {
+    font-size: 1.125rem;
+  }
+  .subscribe-item__btn {
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 991.8px) and (min-width: 768px) {
@@ -529,6 +593,14 @@ a {
     text-align: center;
 
     gap: 40px;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .subscribe__form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .subscribe-item::nth-of-type(1) {
+    grid-column: 1/span 2;
   }
 }
 @media (max-width: 575.8px) {
