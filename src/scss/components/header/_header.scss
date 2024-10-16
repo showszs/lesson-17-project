@@ -1,15 +1,16 @@
-@use "../../presets" as *;
-@use "../../mixins" as *;
+@use '../../presets' as *;
+@use '../../mixins' as *;
 
 .header {
-    position: relative;
-    min-height: 100vh;
-    background-color: $color-primary;
-    color: $color-white;
-    background-image: url(assets/images/img-header.png);
-    background-position: center;
-    background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  background-color: $color-primary;
+  color: $color-white;
+  background-image: url(assets/images/img-header.png);
+  background-position: center;
+  background-size: cover;
+  padding: 150px 0;
 
-    display: grid;
-    align-items: center;
+  display: grid;
+  align-items: center;
 }
