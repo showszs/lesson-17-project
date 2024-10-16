@@ -9,6 +9,12 @@
   border-style: solid;
   padding: 0.5em 1em;
   letter-spacing: 0.1em;
+  transition: background-color 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
 
   &--light {
     background-color: rgba($color-white, 0.1);

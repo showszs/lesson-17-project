@@ -19,22 +19,21 @@
     border: 2px solid transparent;
     border-bottom-color: rgba($color-white, 0.2);
     background-color: rgba($color-white, 0.05);
-    @include lg-min {
-      font-size: 1.125rem;
-    }
-
-    &::placeholder {
-      color: $color-gray;
-    }
-
     &:hover,
-    &::focus {
+    &:focus {
       background-color: rgba($color-white, 0.1);
       border-color: $color-white;
 
       &::placeholder {
         color: rgba($color-white, 0.5);
       }
+    }
+    @include lg-min {
+      font-size: 1.125rem;
+    }
+
+    &::placeholder {
+      color: $color-gray;
     }
 
     &:active {
