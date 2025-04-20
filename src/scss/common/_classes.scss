@@ -5,11 +5,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 0.5em 1em;
+
+  transition: background-color 0.3s;
+  letter-spacing: 0.1em;
+
   border-width: 2px;
   border-style: solid;
-  padding: 0.5em 1em;
-  letter-spacing: 0.1em;
-  transition: background-color 0.3s;
 
   &:hover,
   &:focus {
@@ -17,12 +20,13 @@
   }
 
   &--light {
-    background-color: rgba($color-white, 0.1);
     border-color: $color-white;
+    background-color: rgba($color-white, 0.1);
 
     @include lg-min {
       min-width: 250px;
       min-height: 60px;
+
       font-size: 1.125rem;
     }
     @include lg-md {
@@ -36,16 +40,16 @@
   }
 
   &--primary {
-    font-size: 1.125rem;
     min-height: 60px;
 
-    background-color: rgba($color-primary, 0.8);
     border-color: $color-primary;
+    background-color: rgba($color-primary, 0.8);
+
+    font-size: 1.125rem;
 
     @include sm-min {
       min-width: 350px;
     }
-
     @include sm {
       width: 100%;
     }

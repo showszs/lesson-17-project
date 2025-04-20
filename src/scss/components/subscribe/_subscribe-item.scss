@@ -1,5 +1,5 @@
-@use '../../presets' as *;
-@use '../../mixins' as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 .subscribe-item {
   @include md-sm {
@@ -9,27 +9,31 @@
   }
   &__control {
     display: block;
+
     width: 100%;
     height: 60px;
-    padding-left: $gap-lg;
     padding-right: $gap-lg;
-    letter-spacing: 0.1em;
+    padding-left: $gap-lg;
+
     transition: border-color 0.3s, background-color 0.3s;
+    letter-spacing: 0.1em;
+
     color: $color-white;
     border: 2px solid transparent;
     border-bottom-color: rgba($color-white, 0.2);
     background-color: rgba($color-white, 0.05);
+
+    @include lg-min {
+      font-size: 1.125rem;
+    }
     &:hover,
     &:focus {
-      background-color: rgba($color-white, 0.1);
       border-color: $color-white;
+      background-color: rgba($color-white, 0.1);
 
       &::placeholder {
         color: rgba($color-white, 0.5);
       }
-    }
-    @include lg-min {
-      font-size: 1.125rem;
     }
 
     &::placeholder {
@@ -44,26 +48,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 100%;
     height: 60px;
     padding: 0.5em 1em;
+
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
     letter-spacing: 0.1em;
+
+    color: $color-white;
+    border: 2px solid transparent;
+    border-bottom-color: rgba($color-white, 0.2);
+    background-color: rgba($color-white, 0.1);
+
     @include lg-min {
       font-size: 1.125rem;
     }
 
-    background-color: rgba($color-white, 0.1);
-
-    width: 100%;
-    color: $color-white;
-    border: 2px solid transparent;
-    border-bottom-color: rgba($color-white, 0.2);
-    transition: border-color 0.3s, background-color 0.3s;
-    cursor: pointer;
-
     &:hover,
     &:focus {
-      background-color: $color-accent;
       border-color: $color-white;
+      background-color: $color-accent;
     }
   }
 }

@@ -1,8 +1,9 @@
-@use '../../presets' as *;
-@use '../../mixins' as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 .subscribe {
   padding: $gap-lg;
+
   background-color: $color-primary;
 
   &__container {
@@ -11,12 +12,11 @@
 
   &__form {
     display: grid;
-    gap: $gap;
 
+    gap: $gap;
     @include md-min {
       grid-template-columns: repeat(3, 1fr);
     }
-
     @include md-sm {
       grid-template-columns: repeat(2, 1fr);
     }

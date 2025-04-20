@@ -1,13 +1,19 @@
-@use '../../presets' as *;
-@use '../../mixins' as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 .skill-item {
-  overflow: hidden;
   position: relative;
+
+  overflow: hidden;
   &__title {
     z-index: 1;
+
     margin: 0;
+
     letter-spacing: 0.1em;
+
+    font-family: $font-main;
+
     @include abs-position;
     @include md-min {
       font-size: 1.25rem;
@@ -20,23 +26,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: $gap;
+
     height: 100%;
+    padding: $gap;
+
     transition: color 0.3s;
   }
 
   &__image {
+    transition: transform 0.3s;
+
     background-color: $color-primary;
     background-position: center;
     background-size: cover;
+
     @include abs-position;
-    transition: transform 0.3s;
   }
 
   &__overlay {
-    background-color: $color-primary;
-    opacity: 0.8;
     transition: opacity 0.3s;
+
+    opacity: 0.8;
+    background-color: $color-primary;
 
     @include abs-position;
   }
